@@ -1,5 +1,5 @@
 #enables colorin the terminal bash shell export
-pod::Spec.new do |s|
+Pod::Spec.new do |s|
   s.name             = "BHBPopView"
   s.version          = "1.0.0"
   s.summary          = "Like sina PopView."
