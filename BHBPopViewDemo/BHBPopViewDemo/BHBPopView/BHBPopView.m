@@ -7,7 +7,6 @@
 //
 
 #import "BHBPopView.h"
-#import "AppDelegate.h"
 #import "UIImage+BHBEffects.h"
 #import "UIView+BHBAnimation.h"
 #import "UIImageView+BHBSetImage.h"
@@ -119,8 +118,7 @@
 
 + (void)viewNotEmpty:(UIView *)view{
     if (view == nil) {
-        AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        view = app.window;
+        view = (UIView *)[[UIApplication sharedApplication] delegate];
     }
 
 }
