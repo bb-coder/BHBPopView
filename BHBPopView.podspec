@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.source_files = 'BHBPopViewDemo/BHBPopViewDemo/BHBPopView/*'
+  s.source_files = 'BHBPopViewDemo/BHBPopViewDemo/*'
   # s.resources = 'Assets'
 
   # s.ios.exclude_files = 'Classes/osx'
