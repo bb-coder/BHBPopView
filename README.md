@@ -7,6 +7,10 @@
 
 ##怎么使用：
 
+###0.下载或者在cocoapods中引入：
+
+    pod "BHBPopView" ~>"1.0.0"
+
 ###1.导入头文件
 
     #import "BHBPopView.h"
