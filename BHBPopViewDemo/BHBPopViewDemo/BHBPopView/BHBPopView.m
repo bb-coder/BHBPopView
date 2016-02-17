@@ -51,7 +51,7 @@
         };
         bar.closeClick = ^{
             [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"close"];
-            [self.bottomBar fadeOutWithTime:.25];
+            [weakSelf.bottomBar fadeOutWithTime:.25];
             [weakSelf hideItems];
             [weakSelf hide];
         };
