@@ -1,6 +1,6 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/bb-coder/BHBPopView/master/LICENSE)
-[![CocoaPods](http://img.shields.io/cocoapods/v/YYKit.svg?style=flat)](http://cocoapods.org/?q=BHBPopView)
-[![CocoaPods](http://img.shields.io/cocoapods/p/YYKit.svg?style=flat)](http://cocoapods.org/?q=BHBPopView)
+[![CocoaPods](http://img.shields.io/cocoapods/v/BHBPopView.svg?style=flat)](http://cocoapods.org/?q=BHBPopView)
+[![CocoaPods](http://img.shields.io/cocoapods/p/BHBPopView.svg?style=flat)](http://cocoapods.org/?q=BHBPopView)
 [![Support](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
 # BHBPopView
@@ -68,4 +68,3 @@
 ##没事跟我一样闲的蛋疼请issue我。
 
 good luck!
-
