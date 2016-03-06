@@ -1,7 +1,7 @@
 #enables colorin the terminal bash shell export
 Pod::Spec.new do |s|
   s.name             = "BHBPopView"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "Like sina PopView."
   s.description      = <<-DESC
                        It is a marquee view used on iOS, which implement by Objective-C.
