@@ -16,7 +16,8 @@
 
 @property (nonatomic,strong) NSMutableArray * visableArray;
 @property (nonatomic,strong) NSMutableArray * itemsArray;
-@property (nonatomic,weak) BHBCustomBtn * moreBtn;
+//@property (nonatomic,weak) BHBCustomBtn * moreBtn;
+@property (nonatomic,strong) NSMutableArray * moreBtns;
 @property (nonatomic,assign) BOOL btnCanceled;
 
 @end
@@ -40,6 +41,13 @@
     return _visableArray;
 }
 
+- (NSMutableArray *)moreBtns{
+    if (!_moreBtns) {
+        _moreBtns = [[NSMutableArray alloc] init];
+    }
+    return _moreBtns;
+}
+
 - (void)reloadData{
 //    NSAssert(self.delegate, @"BHBCenterView`s delegate was nil.");
     NSAssert(self.dataSource, @"BHBCenterView`s dataSource was nil.");
@@ -48,6 +56,7 @@
     [self.itemsArray makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.itemsArray removeAllObjects];
     [self.visableArray removeAllObjects];
+    [self.moreBtns removeAllObjects];
     NSUInteger count = [self.dataSource numberOfItemsWithCenterView:self];
     BHBItem * item;
     for (int i = 0; i < count; i ++) {
@@ -69,7 +78,8 @@
         CGFloat height = self.frame.size.height / 2;
         [self.itemsArray addObject:btn];
         if (item.isMore) {
-            self.moreBtn = btn;
+//            self.moreBtn = btn;
+            [self.moreBtns addObject:btn];
         }
         btn.tag = i;
         [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -111,7 +121,8 @@
         return;
     }
     
-    if (btn == self.moreBtn) {
+//    if (btn == self.moreBtn) {
+    if([self.moreBtns containsObject:btn]){
         [btn scalingWithTime:.25 andscal:1];
         if (!self.delegate || ![self.delegate respondsToSelector:@selector(didSelectMoreWithCenterView:andItem:)]) {
             return;
