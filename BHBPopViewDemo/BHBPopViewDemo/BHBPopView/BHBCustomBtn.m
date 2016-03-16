@@ -27,4 +27,8 @@
     
 }
 
+- (void)dealloc{
+    NSLog(@"BHBCustomBtn");
+}
+
 @end

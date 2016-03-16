@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BHBItem;
+@class BHBGroup,BHBItem;
 @class BHBCenterView;
 
 @protocol BHBCenterViewDataSource <NSObject>
@@ -20,8 +20,8 @@
 @protocol BHBCenterViewDelegate <NSObject,UIScrollViewDelegate>
 
 @optional
-- (void)didSelectItemWithCenterView:(BHBCenterView *)centerView andItem:(NSInteger)item;
-- (void)didSelectMoreWithCenterView:(BHBCenterView *)centerView andItem:(NSInteger)item;
+- (void)didSelectItemWithCenterView:(BHBCenterView *)centerView andItem:(BHBItem *)item;
+- (void)didSelectMoreWithCenterView:(BHBCenterView *)centerView andItem:(BHBGroup *)group;
 @end
 
 @interface BHBCenterView : UIScrollView

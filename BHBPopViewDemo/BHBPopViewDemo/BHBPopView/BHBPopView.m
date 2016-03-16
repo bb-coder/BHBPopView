@@ -51,7 +51,6 @@
         };
         bar.closeClick = ^{
             [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"close"];
-            [weakSelf.bottomBar fadeOutWithTime:.25];
             [weakSelf hideItems];
             [weakSelf hide];
         };
@@ -162,19 +161,26 @@
     return self.items[item];
 }
 
--(void)didSelectItemWithCenterView:(BHBCenterView *)centerView andItem:(NSInteger)item
+-(void)didSelectItemWithCenterView:(BHBCenterView *)centerView andItem:(BHBItem *)item
 {
     if (self.selectBlock) {
-        self.selectBlock(self.items[item],item);
+        self.selectBlock(item);
     }
     [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"open"];
     [self hide];
 }
 
-- (void)didSelectMoreWithCenterView:(BHBCenterView *)centerView andItem:(NSInteger)item
+- (void)didSelectMoreWithCenterView:(BHBCenterView *)centerView andItem:(BHBGroup *)group
 {
+    if (self.selectBlock) {
+        self.selectBlock(group);
+    }
     [[BHBPlaySoundTool sharedPlaySoundTool] playWithSoundName:@"open"];
     self.bottomBar.isMoreBar = YES;
+}
+
+- (void)dealloc{
+    NSLog(@"BHBPopView");
 }
 
 @end

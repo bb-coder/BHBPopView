@@ -64,7 +64,10 @@
     return self;
 }
 
-- (void)close{
+- (void)close
+{
+    [self fadeOutWithTime:.25];
+    [self btnResetPosition];
     if (self.closeClick) {
         self.closeClick();
     }
@@ -106,6 +109,8 @@
     }
 }
 
-
+- (void)dealloc{
+    NSLog(@"BHBBottomBar");
+}
 
 @end

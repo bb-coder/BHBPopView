@@ -15,9 +15,9 @@
 #endif
 
 #import <UIKit/UIKit.h>
-#import "BHBItem.h"
+#import "BHBGroup.h"
 
-typedef void (^DidSelectItemBlock) (BHBItem * item,NSInteger index);
+typedef void (^DidSelectItemBlock) (BHBItem * item);
 
 @interface BHBPopView : UIView
 

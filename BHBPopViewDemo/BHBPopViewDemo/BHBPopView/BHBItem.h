@@ -12,7 +12,6 @@
 
 @property (nonatomic,copy) NSString * title;
 @property (nonatomic,copy) NSString * icon;
-@property (nonatomic,assign) BOOL isMore;
 
 -(instancetype)initWithTitle:(NSString *)title Icon:(NSString *)icon;
 
