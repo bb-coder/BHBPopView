@@ -205,7 +205,7 @@
         btn.frame = CGRectMake(x, [UIScreen mainScreen].bounds.size.height + y - self.frame.origin.y, width, height);
         btn.alpha = 0.0;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(idx * 0.03 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:15 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:25 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 btn.alpha = 1;
                 btn.frame = CGRectMake(x, y, width, height);
             } completion:^(BOOL finished) {
