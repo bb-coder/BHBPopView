@@ -68,7 +68,7 @@
     }];
     
  
-###3.使用参考
+###4.使用参考
 使用可参考LiQiankun贡献的DLTabBarController文件夹。
  
 #缺陷:
