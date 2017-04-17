@@ -10,17 +10,17 @@
 ![演示2](http://7xkdhe.com1.z0.glb.clouddn.com/sinaAnimation2.gif)
 
 
-##怎么使用：
+## 怎么使用：
 
-###0.下载或者在cocoapods中引入：
+### 0.下载或者在cocoapods中引入：
 
     pod 'BHBPopView'
 
-###1.导入头文件
+### 1.导入头文件
 
     #import "BHBPopView.h"
 
-###2.显示弹出框
+### 2.显示弹出框
     //添加popview
     [BHBPopView showToView:self.view 
         andImages:@[@"images.bundle/tabbar_compose_idea",
@@ -34,7 +34,7 @@
         }
     ];
 
-###3.使用带more按钮滑动显示第二屏功能
+### 3.使用带more按钮滑动显示第二屏功能
      BHBItem * item0 = [[BHBItem alloc]initWithTitle:@"Text" Icon:@"images.bundle/tabbar_compose_idea"];
     BHBItem * item1 = [[BHBItem alloc]initWithTitle:@"Albums" Icon:@"images.bundle/tabbar_compose_photo"];
     BHBItem * item2 = [[BHBItem alloc]initWithTitle:@"Camera" Icon:@"images.bundle/tabbar_compose_camera"];
@@ -68,25 +68,25 @@
     }];
     
  
-###4.使用参考
+### 4.使用参考
 使用可参考LiQiankun贡献的DLTabBarController文件夹。
  
-#缺陷:
+# 缺陷:
 1.按钮弹出的动画比新浪原版略显生硬。
 
-#编写目的：
-###仅供学习和交流，没有冒犯新浪大大的意思^_^。
+# 编写目的：
+### 仅供学习和交流，没有冒犯新浪大大的意思^_^。
 
-#灵感：
-##每次玩微博都强迫症作祟，跟个傻X一样不停的点这个，会不会有人跟我一样？😁
-##对动画优化有建议的请issue我。
-##没事跟我一样闲的蛋疼请issue我。
+# 灵感：
+## 每次玩微博都强迫症作祟，跟个傻X一样不停的点这个，会不会有人跟我一样？😁
+## 对动画优化有建议的请issue我。
+## 没事跟我一样闲的蛋疼请issue我。
 
 good luck!
 
-##Update log  
+## Update log  
 
-###1.1版本更新:  
+### 1.1版本更新:  
  - 优化弹出时间  
  - 优化内存问题  
  - 增加带层级关系的分组功能（替代原来的more方案）
